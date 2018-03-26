@@ -71,7 +71,7 @@ export default {
   },
   methods: {
     clickNum: function (num) {
-      this.result += num
+      this.num1 += num
     },
     clear: function () {
       this.num1 = ''
@@ -79,13 +79,11 @@ export default {
       this.result = ''
     },
     summation: function (dis, discountN) {
-      this.num1 = this.result
       this.result = this.num1 * dis
       this.discount = discountN
     },
     backSpace: function () {
-      this.backNum = this.result * 1
-      this.result = (this.backNum / 10)
+      this.num1 = this.num1.substring(0, this.num1.length - 1)
     }
   }
 
